@@ -13,7 +13,7 @@
         <ui:define name="contenu">
 
             <h:form>
-                <h:outputLabel for="combo" value="Choisir une couleur : "/>
+                <h:outputLabel for="combo" value="Choisir un continentr : "/>
                 <h:selectOneMenu id="combo" value="#{continentBean.continentSelected}">
                     <f:selectItems value="#{continentBean.continents}"/>
                     <f:converter converterId="continentConverter"/>

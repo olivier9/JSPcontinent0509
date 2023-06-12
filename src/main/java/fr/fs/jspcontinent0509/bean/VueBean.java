@@ -1,12 +1,9 @@
 package fr.fs.jspcontinent0509.bean;
-
-
 import fr.fs.jspcontinent0509.DAO.DAOFactory;
 import fr.fs.jspcontinent0509.metier.Continent;
 import jakarta.annotation.PostConstruct;
 import jakarta.enterprise.context.SessionScoped;
 import jakarta.inject.Named;
-
 import java.io.Serializable;
 import java.util.List;
 
@@ -15,7 +12,6 @@ import java.util.List;
 public class VueBean implements Serializable {
     private static List<Continent> allContinents;
     private Continent continentSelected;
-
     @PostConstruct
     private void init() {
         allContinents = DAOFactory.getContinentDAO().getAll();
@@ -23,11 +19,9 @@ public class VueBean implements Serializable {
 
     public List<Continent> getAllContinents() {
         return allContinents;
-
     }
 
     public void setContinentSelected(Continent countinentSelected) {
-
         this.continentSelected = continentSelected;
     }
     //newArray lsit
