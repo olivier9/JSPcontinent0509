@@ -1,12 +1,9 @@
 package fr.fs.jspcontinent0509.DAO;
-
 import fr.fs.jspcontinent0509.metier.Continent;
-
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
-
 public class ContinentDAO extends DAO<Continent, Continent, Integer> {
     public ArrayList<Continent> getAll() {
         ResultSet rs;

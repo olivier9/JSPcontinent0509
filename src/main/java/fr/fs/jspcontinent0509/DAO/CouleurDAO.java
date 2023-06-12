@@ -1,12 +1,9 @@
 package fr.fs.jspcontinent0509.DAO;
-
 import fr.fs.jspcontinent0509.metier.Couleur;
-
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
-
 public class CouleurDAO extends DAO<Couleur, Couleur, Integer>{
 
     public ArrayList<Couleur> getAll() {
@@ -24,22 +21,15 @@ public class CouleurDAO extends DAO<Couleur, Couleur, Integer>{
         }
         return liste;
     }
-
     public boolean update(Couleur couleur) {
         try {
-
             Statement stmt = connexion.createStatement();
-
             // Determine the column set column
-
-
             String strCmd = "update Couleur set nom_couleur = " + couleur.getLibelle() + " where id_couleur = "
                     + couleur.getId();
             stmt.execute(strCmd);
-
             return true;
         } catch (SQLException e) {
-
             return false;
         }
     }
@@ -48,7 +38,6 @@ public class CouleurDAO extends DAO<Couleur, Couleur, Integer>{
         try {
             Statement stmt = connexion.createStatement();
             // Determine the column set column
-
             String strCmd = "insert into Couleur values " + couleur.getLibelle();
             stmt.execute(strCmd);
             return true;
@@ -62,17 +51,14 @@ public class CouleurDAO extends DAO<Couleur, Couleur, Integer>{
         // TODO Auto-generated method stub
         return null;
     }
-
     @Override
     public boolean delete(Couleur object) {
         // TODO Auto-generated method stub
         return false;
     }
-
     @Override
     public ArrayList<Couleur> getLike(Couleur objet) {
         // TODO Auto-generated method stub
         return null;
     }
-
 }

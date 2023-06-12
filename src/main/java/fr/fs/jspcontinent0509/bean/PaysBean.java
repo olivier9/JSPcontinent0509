@@ -1,6 +1,4 @@
 package fr.fs.jspcontinent0509.bean;
-
-
 import fr.fs.jspcontinent0509.DAO.DAOFactory;
 import fr.fs.jspcontinent0509.metier.Continent;
 import fr.fs.jspcontinent0509.metier.Pays;
@@ -8,7 +6,6 @@ import jakarta.annotation.PostConstruct;
 import jakarta.enterprise.context.SessionScoped;
 import jakarta.faces.event.ValueChangeEvent;
 import jakarta.inject.Named;
-
 import java.io.Serializable;
 import java.util.List;
 
@@ -17,9 +14,9 @@ import java.util.List;
 public class PaysBean implements Serializable {
 
     //    PaysAffiche
+//    AllContinent
 //    AllPays
-//    AllPays
-//    Selected
+//    ContinentSelected
 //    PaysSelected
     private static List<Pays> allPays;
 
@@ -50,7 +47,6 @@ public class PaysBean implements Serializable {
     public Pays getPaysSelected() {
         return paysSelected;
     }
-
 
     public void paysChanged(ValueChangeEvent e)
     {

@@ -1,14 +1,15 @@
 package fr.fs.jspcontinent0509.converter;
 
 import fr.fs.jspcontinent0509.metier.Continent;
+import fr.fs.jspcontinent0509.metier.Couleur;
 import jakarta.faces.component.UIComponent;
 import jakarta.faces.context.FacesContext;
 import jakarta.faces.convert.Converter;
+import jakarta.faces.convert.FacesConverter;
 import jakarta.inject.Inject;
 
+@FacesConverter(value = "continentConverter", managed = true)
 public class ContinentConverter implements Converter {
-
-
     @Inject
     private fr.fs.jspcontinent0509.bean.ContinentBean continentBean;
 

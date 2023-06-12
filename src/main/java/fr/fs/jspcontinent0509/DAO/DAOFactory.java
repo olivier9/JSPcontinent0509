@@ -7,4 +7,7 @@ public class DAOFactory {
     public static ContinentDAO getContinentDAO() {
         return new ContinentDAO();
     }
+    public static PaysDAO getPaysDAO() {
+        return new PaysDAO();
+    }
 }
